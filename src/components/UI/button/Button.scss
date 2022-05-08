@@ -1,0 +1,36 @@
+// Variables
+$primary: #fff;
+
+.btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    &_primary { 
+        background-color: $primary;
+        color: #242424;
+        border: 1px solid $primary;
+    }
+    &_outline {
+        border-color: transparent;
+        background-color: transparent;
+        color: $primary;
+        padding: 8px 20px;
+        border: 1px solid $primary;
+        transition: all 0.3s ease-out;
+    }
+    &_medium {
+        padding: 8px 20px;
+        font-size: 20px;
+    }
+    &_large {
+        padding: 12px 26px;
+        font-size: 20px;
+    }
+    &_medium:hover, &_large:hover{
+        background-color: white;
+        color: #242424;
+        transition: all 0.3s ease-out;
+    }
+}
