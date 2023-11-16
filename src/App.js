@@ -1,4 +1,4 @@
-import React, {createContext} from "react";
+import React, { createContext, useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./styles/App.scss";
 import "./styles/Media.scss";
@@ -24,6 +24,5 @@ function App() {
     </BrowserRouter>
     </div>
   )
-
 }
 export default App;

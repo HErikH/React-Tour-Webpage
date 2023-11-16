@@ -1,10 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion, AnimateSharedLayout } from "framer-motion"
 
 function CardItem(props) {
+    let cardsAnimation = {
+        hidden: {
+            x: '-100%',
+            opacity: 0
+        },
+        visible: {
+            x: 0,
+            opacity: '1'
+        }
+    }   
     return ( 
         <>
-            <li className="cards__item">
+            <motion.li 
+            initial='hidden'
+            whileInView='visible'
+            transition={{duration: 1.5, type: 'spring'}}
+            variants={cardsAnimation}
+            className="cards__item">
                 <Link to={props.path} className="cards__link">
                     <figure 
                     className="cards__pic-wrap" 
@@ -18,7 +34,7 @@ function CardItem(props) {
                         </h5>
                     </div>
                 </Link>
-            </li>
+            </motion.li>
         </>
      );
 }
